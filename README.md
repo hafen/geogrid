@@ -1,21 +1,21 @@
 Algorithmic tesselation with geogrid
 ================
 Joseph Bailey
-2018-12-07
+2023-08-15
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
 
-[![Travis-CI Build
-Status](https://travis-ci.org/jbaileyh/geogrid.svg?branch=master)](https://travis-ci.org/jbaileyh/geogrid)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/geogrid)](https://cran.r-project.org/package=geogrid)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/jbaileyh/geogrid/master.svg)](https://codecov.io/github/jbaileyh/geogrid?branch=master)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/geogrid)](https://cran.r-project.org/package=geogrid)
+[![R-CMD-check](https://github.com/hafen/geogrid/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hafen/geogrid/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/hafen/geogrid/branch/master/graph/badge.svg)](https://app.codecov.io/gh/hafen/geogrid?branch=master)
+<!-- badges: end -->
 
 # geogrid
 
 Turn geospatial polygons like states, counties or local authorities into
-regular or hexagonal grids
-automatically.
+regular or hexagonal grids automatically.
 
 <img src="man/README_figs/README-example4-1.png" width="672" style="display: block; margin: auto;" />
 
@@ -35,7 +35,7 @@ geospatial representation):
     examples see
     [here](https://www.wired.com/2016/10/electoral-maps-look-little-different-heres/)
     and
-    [here](http://www.nytimes.com/interactive/2013/04/08/business/global/asia-map.html).
+    [here](https://archive.nytimes.com/www.nytimes.com/interactive/2013/04/08/business/global/asia-map.html).
     This cartogram approach changes the size of a particular geography
     in-line with the values that one seeks to visualise.
 2.  We may use grids to bin data and typically visualise the spatial
@@ -159,8 +159,7 @@ for (i in 1:6) {
 As we can see there are lots of options. Now, lets choose a grid and
 assign our existing places to it. I happen to like the both grids that
 have a `seed` of 3. So I’m going to assign the polygons to those grids.
-Let’s do that and see what they look like compared to the
-original.
+Let’s do that and see what they look like compared to the original.
 
 ``` r
 new_cells_hex <- calculate_grid(shape = original_shapes, grid_type = "hexagonal", seed = 3)
@@ -193,49 +192,49 @@ The package has two major functions:
 
 1.  `calculate_grid()` given your input polygons this will generate the
     grid as specified by your arguments:
-      - `shape`: the original polygons
-      - `learning_rate`: the rate at which the gradient descent finds
+    -   `shape`: the original polygons
+    -   `learning_rate`: the rate at which the gradient descent finds
         the optimum cellsize to ensure that your gridded points fit
         within the outer boundary of the input polygons.
-      - `grid_type`: either `regular` for a square grid or `hexagonal`
+    -   `grid_type`: either `regular` for a square grid or `hexagonal`
         for a hexagonal grid.
-      - `seed`: the seed to ensure you get the same grid output.
+    -   `seed`: the seed to ensure you get the same grid output.
 2.  `assign_polygons()`: this will assign the original polygons to their
     new locations on the grid generated in `calculate_grid()`. It will
     find the solution that minimises the sum of the total distance
     between the original polygon centroids and eventual gridded
     centroids. Arguments:
-      - `shape`: the original polygons
-      - `new_polygons`: the output (a list) from `calculate_grid()`.
+    -   `shape`: the original polygons
+    -   `new_polygons`: the output (a list) from `calculate_grid()`.
 
 ## TODO
 
-  - Assignment may not always work - check the `assign_polygons()` why
+-   Assignment may not always work - check the `assign_polygons()` why
     does it only work sometimes?
-  - Make it work (done I think), make it right (not yet), make it fast
+-   Make it work (done I think), make it right (not yet), make it fast
     (not yet).
-  - Improve the cellsize calculation methodology.
-  - Get someone to answer [this stack overflow
+-   Improve the cellsize calculation methodology.
+-   Get someone to answer [this stack overflow
     question](https://math.stackexchange.com/questions/2388000/find-topologically-closest-graph-under-constraints).
 
 ## Notes
 
 This is my first attempt at a package. If it doesn’t work I’d like
-suggestions for improvements and thanks in advance for providing them\!
+suggestions for improvements and thanks in advance for providing them!
 
 I welcome critique and feedback. Blog post to follow.
 
 ## Thanks
 
-I read a lot of the work by [Hadley Wickham](http://hadley.nz/), [Jenny
+I read a lot of the work by [Hadley Wickham](https://hadley.nz/), [Jenny
 Bryan](https://github.com/jennybc), [Thomas Lin
 Pedersen](https://www.data-imaginist.com/about/), [Mara
-Averick](https://twitter.com/dataandme?lang=en) and [Bob
+Averick](https://twitter.com/dataandme) and [Bob
 Rudis](https://github.com/hrbrmstr) to name a few. But also love the R
 community and learn a huge amount from [R
 Bloggers](https://www.r-bloggers.com/).
 
-Extra thanks go to [Ryan Hafen](http://ryanhafen.com/) for making this
+Extra thanks go to [Ryan Hafen](https://ryanhafen.com/) for making this
 package publishable.
 
 # Other examples
@@ -244,13 +243,12 @@ From others:
 
 Simon Hailstone has looked at [male life expectancy in the South East
 region of England](http://rpubs.com/Hailstone/326118) using the package.
-Thanks Simon for using\!
+Thanks Simon for using!
 
 From me:
 
 This time using the contiguous USA. Again, I used set seed and chose
-some that I liked but I’d recommend you’d do the
-same.
+some that I liked but I’d recommend you’d do the same.
 
 ``` r
 input_file2 <- system.file("extdata", "states.json", package = "geogrid")
@@ -284,8 +282,7 @@ for (i in 1:6) {
 
 <img src="man/README_figs/README-example6a-1.png" width="768" style="display: block; margin: auto;" />
 
-Now we’ve seen some seed demo’s lets assign
-them…
+Now we’ve seen some seed demo’s lets assign them…
 
 ``` r
 new_cells_hex2 <- calculate_grid(shape = original_shapes2, grid_type = "hexagonal", seed = 6)
@@ -307,8 +304,7 @@ tmap_arrange(rawplot2, hexplot2, regplot2, nrow = 3)
 
 <img src="man/README_figs/README-example7-1.png" width="768" style="display: block; margin: auto;" />
 
-Likewise, you can try the bay
-area…
+Likewise, you can try the bay area…
 
 ``` r
 input_file3 <- system.file("extdata", "bay_counties.geojson", package = "geogrid")

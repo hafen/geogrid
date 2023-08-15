@@ -1,13 +1,11 @@
 Package: geogrid
 Title: Turn Geospatial Polygons into Regular or Hexagonal Grids
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
-    person("Joseph", "Bailey", email = "jbailey@futurecities.catapult.org.uk", role = c("aut", "cre")),
-    person("Ryan", "Hafen", email = "rhafen@gmail.com", role = "ctb"),
+    person("Joseph", "Bailey", email = "jbailey@futurecities.catapult.org.uk", role = c("aut")),
+    person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("ctb", "cre"), comment = c(ORCID = "0000-0002-5516-8367")),
     person("Jakub", "Nowosad", email = "nowosad.jakub@gmail.com", role = "ctb", comment = c(ORCID = "0000-0002-1057-3721")),
-    person("Lars Simon Zehnder", role = "ctb", 
-           comment = "RcppArmadillo implmentation of Munkres' Assignment Algorithm"
-    ))
+    person("Lars Simon Zehnder", role = "ctb", comment = "RcppArmadillo implmentation of Munkres' Assignment Algorithm"))
 Description: Turn irregular polygons (such as geographical regions) into regular or hexagonal grids.
     This package enables the generation of regular (square) and hexagonal grids through the package 
     'sp' and then assigns the content of the existing polygons to the new grid using 

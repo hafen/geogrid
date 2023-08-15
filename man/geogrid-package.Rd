@@ -17,11 +17,15 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Joseph Bailey \email{jbailey@futurecities.catapult.org.uk}
+\strong{Maintainer}: Ryan Hafen \email{rhafen@gmail.com} (\href{https://orcid.org/0000-0002-5516-8367}{ORCID}) [contributor]
+
+Authors:
+\itemize{
+  \item Joseph Bailey \email{jbailey@futurecities.catapult.org.uk}
+}
 
 Other contributors:
 \itemize{
-  \item Ryan Hafen \email{rhafen@gmail.com} [contributor]
   \item Jakub Nowosad \email{nowosad.jakub@gmail.com} (\href{https://orcid.org/0000-0002-1057-3721}{ORCID}) [contributor]
   \item Lars Simon Zehnder (RcppArmadillo implmentation of Munkres' Assignment Algorithm) [contributor]
 }

@@ -12,10 +12,11 @@ output:
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "man/README_figs/README-")
 ```
-
-[![Travis-CI Build Status](https://travis-ci.org/jbaileyh/geogrid.svg?branch=master)](https://travis-ci.org/jbaileyh/geogrid)
+<!-- badges: start -->
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/geogrid)](https://cran.r-project.org/package=geogrid)
-[![Coverage Status](https://img.shields.io/codecov/c/github/jbaileyh/geogrid/master.svg)](https://codecov.io/github/jbaileyh/geogrid?branch=master)
+[![R-CMD-check](https://github.com/hafen/geogrid/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hafen/geogrid/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/hafen/geogrid/branch/master/graph/badge.svg)](https://app.codecov.io/gh/hafen/geogrid?branch=master)
+<!-- badges: end -->
 
 # geogrid
 
@@ -31,7 +32,7 @@ As a result, many opt to generate maps that use consistent shapes (i.e. regular 
 Generally there are four reasons that one might transform geospatial polygons to a different grid (or geospatial representation):
 
 1. We may use cartograms to represent the number of people (or any value) within a particular geography.
-For more information and examples see [here](https://www.wired.com/2016/10/electoral-maps-look-little-different-heres/) and [here](http://www.nytimes.com/interactive/2013/04/08/business/global/asia-map.html). 
+For more information and examples see [here](https://www.wired.com/2016/10/electoral-maps-look-little-different-heres/) and [here](https://archive.nytimes.com/www.nytimes.com/interactive/2013/04/08/business/global/asia-map.html). 
 This cartogram approach changes the size of a particular geography in-line with the values that one seeks to visualise.
 2. We may use grids to bin data and typically visualise the spatial density of a particular variable. 
 For an example see [here](https://bl.ocks.org/mbostock/4330486).
@@ -170,10 +171,10 @@ Blog post to follow.
 
 ## Thanks
 
-I read a lot of the work by [Hadley Wickham](http://hadley.nz/), [Jenny Bryan](https://github.com/jennybc), [Thomas Lin Pedersen](https://www.data-imaginist.com/about/), [Mara Averick](https://twitter.com/dataandme?lang=en) and [Bob Rudis](https://github.com/hrbrmstr) to name a few. 
+I read a lot of the work by [Hadley Wickham](https://hadley.nz/), [Jenny Bryan](https://github.com/jennybc), [Thomas Lin Pedersen](https://www.data-imaginist.com/about/), [Mara Averick](https://twitter.com/dataandme) and [Bob Rudis](https://github.com/hrbrmstr) to name a few. 
 But also love the R community and learn a huge amount from [R Bloggers](https://www.r-bloggers.com/).
 
-Extra thanks go to [Ryan Hafen](http://ryanhafen.com/) for making this package publishable.
+Extra thanks go to [Ryan Hafen](https://ryanhafen.com/) for making this package publishable.
 
 # Other examples
 
