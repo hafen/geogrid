@@ -21,7 +21,7 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Joseph Bailey \email{jbailey@futurecities.catapult.org.uk}
+  \item Joseph Bailey \email{jbailey@futurecities.catapult.org.uk} [copyright holder]
 }
 
 Other contributors:
