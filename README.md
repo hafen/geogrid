@@ -8,8 +8,6 @@ Joseph Bailey
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/geogrid)](https://cran.r-project.org/package=geogrid)
 [![R-CMD-check](https://github.com/hafen/geogrid/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hafen/geogrid/actions/workflows/R-CMD-check.yaml)
-[![Codecov test
-coverage](https://codecov.io/gh/hafen/geogrid/branch/master/graph/badge.svg)](https://app.codecov.io/gh/hafen/geogrid?branch=master)
 <!-- badges: end -->
 
 # geogrid

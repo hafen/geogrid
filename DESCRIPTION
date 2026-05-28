@@ -26,8 +26,7 @@ LinkingTo:
     RcppArmadillo
 Suggests: 
     testthat,
-    lintr,
-    covr
+    lintr
 RoxygenNote: 7.3.3
 URL: https://github.com/jbaileyh/geogrid
 BugReports: https://github.com/jbaileyh/geogrid/issues
