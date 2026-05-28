@@ -9,3 +9,5 @@
 \.sublime\-
 ^\.github$
 ^revdep$
+^CRAN-SUBMISSION$
+^_ignore$

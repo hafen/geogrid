@@ -1,24 +1,19 @@
-Updates since last release:
+## Updates since last release
 
-- Removed dependency on rgeos
-- Package has changed maintainers
+- Replaced `%>%` with native pipe `|>` in examples to fix CRAN check errors
+- Added `Depends: R (>= 4.1)` for native pipe support
+- Removed `LazyData: true` (no lazy data in package)
 
 ## Test environments
 
-* local OS X install, R 4.3.1
-* ubuntu 22.04.3 (on GitHub Actions), R 4.3.1
+* local macOS (aarch64-apple-darwin20), R 4.5.3
+* ubuntu-latest (on GitHub Actions), R release and R devel
+* windows-latest (on GitHub Actions), R release
 * win-builder (devel and release)
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* New maintainer:
-    Ryan Hafen <rhafen@gmail.com>
-  Old maintainer(s):
-    Joseph Bailey <jbailey@futurecities.catapult.org.uk>
-
-  Joseph Bailey is no longer able to maintain this package. He has notified CRAN of the handover to Ryan Hafen.
+0 errors | 0 warnings | 0 notes
 
 ## revdepcheck results
 

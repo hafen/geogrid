@@ -14,7 +14,7 @@
 #' @examples
 #' library(sf)
 #' input_file <- system.file("extdata", "london_LA.json", package = "geogrid")
-#' original_shapes <- st_read(input_file) %>% st_set_crs(27700)
+#' original_shapes <- st_read(input_file) |> st_set_crs(27700)
 #'
 #' # calculate grid
 #' new_cells <- calculate_grid(shape = original_shapes,

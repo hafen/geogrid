@@ -50,7 +50,7 @@ geospatial representation):
     entities (such as US states, UK local authorities, or even countries
     in Europe). For an example of representing US states as both regular
     and hexagonal grids see
-    [here](http://blog.apps.npr.org/2015/05/11/hex-tile-maps.html).
+    [here](https://blog.apps.npr.org/2015/05/11/hex-tile-maps.html).
 
 The link in bullet 4 provides an excellent introduction to the notion of
 tesselation and its challenges. Interestingly, the eventual generation
@@ -104,7 +104,7 @@ library(sf)
 library(tmap)
 
 input_file <- system.file("extdata", "london_LA.json", package = "geogrid")
-original_shapes <- st_read(input_file) %>% st_set_crs(27700)
+original_shapes <- st_read(input_file) |> st_set_crs(27700)
 original_shapes$SNAME <- substr(original_shapes$NAME, 1, 4)
 ```
 
@@ -252,7 +252,7 @@ some that I liked but I’d recommend you’d do the same.
 
 ``` r
 input_file2 <- system.file("extdata", "states.json", package = "geogrid")
-original_shapes2 <- st_read(input_file2) %>% st_transform(2163)
+original_shapes2 <- st_read(input_file2) |> st_transform(2163)
 original_shapes2$SNAME <- substr(original_shapes2$NAME, 1, 4)
   
 rawplot2 <- tm_shape(original_shapes2) +
@@ -308,7 +308,7 @@ Likewise, you can try the bay area…
 
 ``` r
 input_file3 <- system.file("extdata", "bay_counties.geojson", package = "geogrid")
-original_shapes3 <- st_read(input_file3) %>% st_transform(3310)
+original_shapes3 <- st_read(input_file3) |> st_transform(3310)
 original_shapes3$SNAME <- substr(original_shapes3$county, 1, 4)
   
 rawplot3 <- tm_shape(original_shapes3) +
